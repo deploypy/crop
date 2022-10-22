@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<!-- Products & Services -->
+<section class="blog py-5">
+	<div class="container py-md-5">
+		<h3 class="heading mb-sm-5 mb-4 text-center"> Our Services</h3>
+		<div class="row blog-grids">
+			<div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+				<img src="{{ url_for('static', filename='images/s3.jpg') }}" class="img-fluid" alt="" />
+				<a href="{{ url_for('crop_recommend') }}">
+					<div class="blog-info">
+
+						<h4>Crop</h4>
+
+						<p class="mt-2">Crop Recommendation</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+				<img src="{{ url_for('static', filename='images/fertilizer_s.jpg') }}" class="img-fluid" alt="" />
+				<a href="{{ url_for('fertilizer_recommendation') }}">
+					<div class="blog-info">
+
+						<h4>Fertilizer</h4>
+
+						<p class="mt-3">Fertilizer Recommendation</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+				<img src="{{ url_for('static', filename='images/plant_disease.jfif') }}" class="img-fluid" alt="" />
+				<a href="{{ url_for('disease_prediction') }}">
+					<div class="blog-info">
+
+						<h4>Disease</h4>
+
+						<p class="mt-3">Disease Prediction</p>
+					</div>
+				</a>
+			</div>
+
+			
+
+		</div>
+	</div>
+</section>
+<!-- //Products & Services -->
+
+
+
+</html>
+
+{% endblock %}

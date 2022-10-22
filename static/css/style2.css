@@ -1,0 +1,53 @@
+:root{ --main-color: #FF421E; }
+.serviceBox{
+    color: var(--main-color);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 35px 28px 25px;
+    position: relative;
+    z-index: 1;
+}
+.serviceBox:before,
+.serviceBox:after{
+    content: "";
+    border-radius: 25px;
+    border: 10px solid var(--main-color);
+    clip-path: polygon(65% 0, 100% 0, 100% 35%, 35% 100%, 0 100%, 0 65%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.serviceBox:after{
+    border-width: 3px;
+    clip-path: polygon(0 0, 60% 0, 55% 5%, 96% 44%, 100% 40%, 100% 100%, 40% 100%, 43% 95%, 5% 55%, 0 60%);
+    top: 3px;
+    bottom: 3px;
+    right: 3px;
+    left: 3px;
+}
+.serviceBox .service-icon{
+    font-size: 40px;
+    margin: 0 0 10px;
+}
+.serviceBox .title{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+.serviceBox .description{
+    color: #555;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    margin: 0s;
+}
+.serviceBox.gray{ --main-color: #252D36; }
+.serviceBox.purple{ --main-color: #BE2EDD; }
+.serviceBox.blue{ --main-color: #0bb7ce; }
+@media only screen and (max-width: 1199px){
+    .serviceBox{ margin: 0 0 40px; }
+}
